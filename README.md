@@ -1,0 +1,2 @@
+# Tsumory2
+Haxeバージョン
