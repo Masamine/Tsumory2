@@ -1,0 +1,500 @@
+@charset "UTF-8";
+
+@import "common/layout.css";
+
+
+
+/*-------------------------------------------------------------------------
+  page
+/*-----------------------------------------------------------------------*/
+.title {
+  position:relative;
+  padding:15px 30px;
+}
+#all .box {
+  padding:0;
+}
+h1 {
+  float:left;
+  margin-right:30px;
+}
+#all {
+  padding-bottom: 20px;
+}
+#reg {
+  float:left;
+  margin-top:2px;
+}
+.msg {
+  margin:15px 30px 20px;
+}
+  .msg span {
+    font-weight: bold;
+    color: #76d9af;
+  }
+
+#submit {
+  cursor: pointer;
+}
+#names {
+  background-color:#a4aeb9;
+}
+
+  #names ul {
+    display:table;
+    width:100%;
+  }
+  #names li {
+    font-size:12px;
+    color:#FFF;
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+  }
+  #all .client, .list h2 {
+    width:20%;
+    padding:5px 2%;
+  }
+  #all .works, .list .works {
+    width:52%;
+    padding:0 2%;
+  }
+  #all .update, .list .update {
+    text-align:center;
+  }
+  #names.listname li {
+    width: 16.5%;
+  }
+  .isCost #names.listname li {
+    width: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .isCost #names.listname li.edit {
+    width: 120px;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .isCost #names.listname li.code {
+    width: 10%;
+  }
+  .isCost #names.listname li.content {
+    width: 40%;
+  }
+
+/* =========================================================
+リスト系
+========================================================= */
+.list {
+  cursor:pointer;
+  position:relative;
+  z-index:10;
+  width:100%;
+  overflow-x:hidden;
+  border-top: 1px solid transparent;
+}
+
+.list:hover, .focus {
+  box-shadow:0px 0px 5px #76d9af;
+  z-index:100;
+}
+.noList .list {
+  cursor:inherit;
+}
+.noList .list:hover {
+  box-shadow:none;
+}
+.list.active {
+  box-shadow:none;
+  cursor:auto;
+  border-top: 1px solid #ddeb9a;
+  background-color: #f7ffd3 !important;
+  border-bottom: 1px solid #ddeb9a;
+}
+.list:last-child {
+  border-radius:0px 0px 4px 4px / 0px 0px 4px 4px;
+}
+.list:nth-child(even) {
+  background-color:#f2fafe;
+}
+  .list .names {
+    display:table;
+    width:100%;
+		position:relative;
+		opacity:0;
+		left:40px;
+  }
+  .list .names.anim {
+    left: 100%;
+    opacity: 1;
+  }
+  .list.active .names {
+    border-bottom: 1px solid #ddeb9a;
+  }
+    .list h2, .list .names p {
+      display:table-cell;
+      padding:10px 0;
+      vertical-align:middle;
+    }
+    .isCost #all .list .names p {
+      text-align: center;
+      padding:10px 2%;
+      width: 20%;
+    }
+    .isCost #all .list .names p.code {
+      width: 10%;
+    }
+    .isCost #all .list .names p.content {
+      text-align: left;
+      width: 40%;
+    }
+    .isCost #all .list .names p.cost,
+    .isCost #all .list .names p.sales,
+    .isCost #names.listname li.cost,
+    .isCost #names.listname li.sales {
+      width: 15%;
+    }
+    .isCost #all .list .names .editbtn {
+      vertical-align:middle;
+      padding-left: 2%;
+      width: 120px;
+    }
+    .list h2 {
+      padding-left:30px;
+    }
+    .client .list p {
+      padding-left: 30px;
+      width: 120px;
+    }
+    .client .list h2 {
+      width: 85%;
+    }
+    .list .update {
+      padding-right:30px;
+    }
+    .list.active h2, .list.active p.works, .list.active p.update {
+    }
+    
+    .noList .list h2 {
+      padding:15px 0 15px 30px;
+    }
+
+.list .contents {
+  background-color:#ffffff;
+  padding:2px 0;
+  display:none;
+}
+  .list .contents .reg {
+    text-align:center;
+    margin-bottom:13px;
+  }
+  .list .contents .inner {
+    background-color:#fefefe;
+    padding:10px 30px 15px;
+  }
+  .list .contents .data {
+    border-bottom:1px solid #ddd;
+    background-color: #fff;
+    display:table;
+    width:100%;
+    padding: 1px 0;
+    position: relative;
+  }
+  .list .contents table {
+    width:100%;
+  }
+  .list .contents table.listnames {
+    background-color: #f2f2f2;
+    border-top:1px solid #ddd;
+    padding: 3px 0;
+  }
+  .list .contents td {
+    font-size:13px;
+    vertical-align:middle;
+    padding:0px 5px;
+    border-right: 1px dotted #ccc;
+  }
+  .list .contents td:last-child {
+    
+  }
+  .list .contents .data:last-child {
+  }
+  .list .contents .icon {
+  }
+  .list .contents .name {
+    text-align: center;
+  }
+  .list .contents table.listnames td {
+    text-align: center;
+  }
+  .list .contents table td.btns {
+    border: none;
+  }
+  .list .contents .price {
+    text-align: right;
+    padding-right: 15px;
+  }
+  .list .contents p.none {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+  #all .list .contents .update {
+  }
+    .list .contents .data .icon li {
+      float:left;
+      border:1px solid #999;
+      border-radius:4px;
+      margin:1px 3px 1px 0;
+    }
+    .list .contents .data .icon .web {
+      border-color:#6ac7f2;
+      background-color: #6ac7f2;
+    }
+    .list .contents .data .icon .design {
+      border-color:#f2aa6a;
+      background-color: #f2aa6a;
+    }
+    .list .contents .data .icon .edit {
+      border-color:#f791ae;
+      background-color: #f791ae;
+    }
+    .list .contents .data .icon .dtp {
+      border-color:#86d162;
+      background-color: #86d162;
+    }
+      .list .contents .data .icon li span {
+        font-size:11px;
+        display:block;
+        padding:1px 4px;
+        color: #fff;
+        border-radius:4px;
+      }
+    #all .list .contents .data .radbtn {
+      margin:3px 0px 3px 0;
+      text-align: center;
+    }
+    #all .list .contents .data .radbtn a {
+      font-size:12px;
+      width:60px;
+      padding:3px 0;
+      text-align:center;
+    }
+    #all .radbtn.delete a {
+      background-color:#e78d8d;
+      text-shadow:1px 1px 0px #b9534e;
+      box-shadow:0px 1px 0px #b9534e;
+    }
+    #all .radbtn.delete a:hover {
+      box-shadow:0px 1px 1px #9b2e29 inset;
+      text-shadow:1px 1px 0px #9b2e29;
+      background-color:#b9534e;
+    }
+
+/* =========================================================
+ユーザー情報ページ
+========================================================= */
+.user {
+}
+  .user #contents .inner {
+    padding: 0 30px 30px;
+    width: 400px;
+    margin: 0 auto;
+  }
+    .user #contents .inner li {
+      width: 100%;
+      display: table;
+      margin-bottom: 15px;
+    }
+      .user #contents .inner li span.name {
+        display: table-cell;
+        width: 130px;
+        vertical-align: middle;
+      }
+      .user #contents .inner li input {
+        display: table-cell;
+        width: 100%;
+        vertical-align: middle;
+      }
+
+/* =========================================================
+検索ボックス
+========================================================= */
+#search {
+  position:relative;
+  position: fixed;
+  top: -60px;
+  left: 190px;
+  right: 0px;
+  z-index: 150;
+}
+  #search .box {
+    padding:30px 30px 20px;
+    background-color: rgba(0,10,40,0.9);
+  }
+  .accBox ul {
+    display: none;
+    border: 1px solid #ccc;
+    border-top: 1px dashed #ccc;
+    border-radius:0px 0px 4px 4px / 0px 0px 4px 4px;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 100%;
+    box-sizing:border-box;
+    background-color: #fff;
+    max-height: 250px;
+    overflow-y:auto;
+    z-index: 200;
+  }
+    .accBox ul li {
+      border-bottom: 1px dotted #ccc;
+      padding: 5px 20px;
+      font-size: 13px;
+    }
+    .accBox ul li:hover {
+      background-color: #d5f5e8;
+    }
+    .accBox ul li:last-child {
+      border: none;
+    }
+    .accBox ul li.selc {
+      color: #fff;
+      background-color: #76d9af;
+    }
+  #search .select {
+    float:left;
+    width:20%;
+    margin-right:1%;
+    position:relative;
+  }
+  .accBox .select {
+    position:relative;
+  }
+  #search .select.keyword {
+    width:48%;
+    margin-right:0;
+  }
+    .accBox .select span {
+      font-size:8px;
+      position:absolute;
+      top:1px;
+      right:1px;
+      background-color:#76d9af;
+      color:#FFF;
+      height:31px;
+      line-height:30px;
+      padding:0 8px;
+      border-radius:0px 4px 4px 0px / 0px 4px 4px 0px;
+    }
+    .accBox .select .input,
+    .accBox .select li {
+      cursor:pointer;
+    }
+    #search .btnsearch {
+      float:right;
+    }
+      #search .btnsearch input {
+        padding:6px 15px 5px;
+        border:none;
+        cursor:pointer;
+      }
+
+.isForm #contents .formBox {
+  display: none;
+  background-color: #faffe2;
+  border-top: 1px solid #ddeb9a;
+  border-bottom: 1px solid #ddeb9a;
+}
+.isForm #contents .formBox .form {
+  margin-bottom:15px;
+}
+.isForm #contents .formBox .accBox {
+  padding:20px 30px;
+}
+.isForm #contents .formBox .form:last-child {
+  margin-bottom:0;
+}
+.isForm #contents .formBox .submit {
+  width: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
+  .regWorks .form,
+  .regUnit .form {
+    width: 24%;
+    float: left;
+    padding-right: 1%;
+  }
+  .regWorks .form {
+    width: 32%;
+  }
+  .regWorks .form:last-child,
+  .regUnit .form:last-child {
+    margin-right: 0;
+  }
+  .regUnit .radbtn {
+    clear: both;
+    padding-top: 15px;
+  }
+
+/* =========================================================
+モーダルウィンドウ
+========================================================= */
+#modal {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:100;
+  background-color:rgba(50,80,120,0.2);
+  display:none;
+}
+#modal.active {
+  display:block;
+}
+  #regBox {
+    width:740px;
+    margin:75px auto 0;
+    background-color:rgba(255,255,255,0.85);
+    border:1px solid #fafafa;
+    padding:25px;
+    box-shadow:0 0 6px #889;
+    position:relative;
+  }
+    #regBox h3 {
+      text-align:center;
+      font-size:20px;
+      margin-bottom:10px;
+    }
+    #regBox #close {
+      background-color:#000;
+      width:30px;
+      position:absolute;
+      top:5px;
+      right:5px;
+    }
+      #regBox #close a {
+        font-size:20px;
+        color:#FFF;
+        text-align:center;
+        height:30px;
+        line-height:27px;
+        display:block;
+        border:1px solid #000;
+      }
+      #regBox #close a:hover {
+        background-color:#FFF;
+        color:#000;
+      }
+    #regBox p {
+      margin-bottom:15px;
+    }
+    #regBox form .radbtn {
+      text-align:center;
+    }
+    #regBox input[type="submit"] {
+      width:50%;
+    }

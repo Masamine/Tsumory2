@@ -1,0 +1,6 @@
+-cp src
+-main src.Main
+-lib jQueryExtern
+-lib gsap
+-js files/js/main.js
+-cp ../../../haxe/

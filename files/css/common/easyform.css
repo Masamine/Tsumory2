@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+#submit {
+  cursor: pointer;
+}
+#names {
+  background-color:#a4aeb9;
+}
+
+.isForm #contents .formBox {
+  display: nones;
+  background-color: #faffe2;
+  border-top: 1px solid #ddeb9a;
+  border-bottom: 1px solid #ddeb9a;
+}
+.isForm #contents .formBox .form {
+  margin-bottom:15px;
+}
+.isForm #contents .formBox .accBox {
+  padding:20px 30px;
+}
+.isForm #contents .formBox .form:last-child {
+  margin-bottom:0;
+}
+.isForm #contents .formBox .submit {
+  width: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
+  .regWorks .form,
+  .regUnit .form {
+    width: 24%;
+    float: left;
+    padding-right: 1%;
+  }
+  .regWorks .form {
+    width: 32%;
+  }
+  .regWorks .form:last-child,
+  .regUnit .form:last-child {
+    margin-right: 0;
+  }
+  .regUnit .radbtn {
+    clear: both;
+    padding-top: 15px;
+  }
+.accBox .select {
+  position:relative;
+}
+  .accBox .select span {
+    font-size:8px;
+    position:absolute;
+    top:1px;
+    right:1px;
+    background-color:#76d9af;
+    color:#FFF;
+    height:31px;
+    line-height:30px;
+    padding:0 8px;
+    border-radius:0px 4px 4px 0px / 0px 4px 4px 0px;
+  }
