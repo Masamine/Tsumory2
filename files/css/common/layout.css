@@ -301,8 +301,8 @@ input, textarea {
     display:table;
     width:100%;
     position:relative;
-    opacity:0;
-    left:40px;
+    /*opacity:0;*/
+    /*left:40px;*/
   }
   .list .names.anim {
     left: 100%;
